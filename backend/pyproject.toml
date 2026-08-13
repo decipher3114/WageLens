@@ -1,0 +1,27 @@
+[project]
+name = "wagelens"
+version = "1.0.0"
+description = "Voice-first wage discrepancy reporting API for gig workers."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [{ name = "decipher3114", email = "decipher3114@gmail.com" }]
+dependencies = [
+  "crewai>=0.11.0",
+  "fastapi>=0.115.0",
+  "httpx>=0.27.0",
+  "openai>=1.55.0",
+  "pydantic>=2.9.0",
+  "pydantic-settings>=2.6.0",
+  "qdrant-client>=1.12.0",
+  "sentence-transformers>=3.3.0",
+  "sqlalchemy>=2.0.36",
+  "uvicorn[standard]>=0.32.0",
+  "websockets>=13.0",
+]
+
+[project.scripts]
+dev = "wagelens.dev:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
